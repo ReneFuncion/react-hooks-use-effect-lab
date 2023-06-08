@@ -8,7 +8,7 @@ function Question({ question, onAnswered }) {
     // Start timer when the component is rendered and when theres a new question.
     const timerId = setTimeout(() => {
       // If time has run out, user has answered incorrectly and reset the timer.
-      if ((timeRemaining = 1)) {
+      if (timeRemaining <= 1) {
         onAnswered(false);
         setTimeRemaining(10);
       } else {
